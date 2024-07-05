@@ -1,0 +1,63 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+:root{
+  --primary-color : #3EB489;
+  --secondary-color:  #faf6f6;
+
+
+}
+.section_start_one{
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+
+.div_img_start img{
+  border-radius: 10px;
+  padding: 2px;
+  transition: transform .5s ease-in;
+
+  cursor: pointer;
+
+  
+  
+}
+.div_img_start img:hover{
+  transform: scale(1.08);
+
+}
+@media screen and (max-width:700px)
+{
+  .start_contact{
+
+     display: none;
+  }
+  .div_img_start{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+      
+  }
+  .div_img_start img{
+    margin-top: 14px;
+    height: 85%;
+  width: 30%;
+    
+    
+  }
+
+  .div_section_start{
+    margin-top: 4px;
+
+    display: block;
+    height:100px;
+    justify-content: center;
+    align-items: center;
+  }
+  .div_content,
+  .cart_section_start{
+    display: none;
+  }
+}

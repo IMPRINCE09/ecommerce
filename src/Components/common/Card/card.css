@@ -1,0 +1,21 @@
+
+.section_tansition{
+    transition: transform .5s ease-out;
+}
+.div_img{
+ 
+}
+
+ .first_img{
+    position: absolute;
+    top: 0;
+    display: none;
+ }
+ .first_img:hover{
+    display: block;
+ }
+
+.section_tansition:hover{
+    transform: scale(1.1);
+
+}

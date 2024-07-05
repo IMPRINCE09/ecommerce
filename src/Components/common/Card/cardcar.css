@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+.image_card_sec{
+     transition: transform 1s ease-in-out;
+     font-family: "PT Serif", serif;
+     font-weight: 400;
+     font-style: normal;
+
+}
+.image_card_sec:hover{
+  transform: scale(1.04);
+}
+
+.trending_post{
+
+    transition: transform .5s ease-in-out;
+}
+.trending_post:hover{
+  transform: scale(1.08);
+}

@@ -1,0 +1,24 @@
+.Catalog_img{
+    background: url('https://img.freepik.com/premium-photo/photo-fashion-blank-tshirt-mockup-design_919301-1158.jpg?w=740');
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.img_Dropdown{
+    background: url('https://img.freepik.com/free-psd/travel-mountain-marketing-template-psd-ad-poster-agencies_53876-123511.jpg?t=st=1718170869~exp=1718174469~hmac=4157af0e3678cee92bbd9f6fc708bca9783ff0704a3ee2495205760dbfa9293e&w=360');
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+
+}
+
+.Daily_updates{
+    background: url('https://img.freepik.com/free-photo/anime-style-mountains-landscape_23-2151135325.jpg?t=st=1718171213~exp=1718174813~hmac=fb0810cc49d2a5929e5807bc06a4371fb269020a9c33d9779f84a1504cbbd718&w=360');
+    background-size: cover ;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    
+}

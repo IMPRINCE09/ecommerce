@@ -1,0 +1,39 @@
+
+
+
+
+
+.back_img_two
+{
+    background-image: url('https://img.freepik.com/premium-photo/threaded-comfort-exploring-world-tshirts_941561-12720.jpg?w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.back_img_one{
+    background-image: url('https://img.freepik.com/premium-photo/closeup-red-tshirt-hanging-white-wallunited-statesusa_808262-253.jpg?w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+}
+
+.back_img_three{
+    background-image: url('https://img.freepik.com/premium-photo/photo-fashion-blank-tshirt-mockup-design_919301-1158.jpg?w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+}
+.back_img_four{
+    background-image: url('https://img.freepik.com/premium-photo/closeup-red-tshirt-hanging-white-wallunited-statesusa_808262-253.jpg?w=740');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+
+}

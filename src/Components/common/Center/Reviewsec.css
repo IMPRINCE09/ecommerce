@@ -1,0 +1,18 @@
+.review_sec_div{
+    background-image: url('https://images.bewakoof.com/uploads/grid/app/Summer-Essential-1x1-IK-RM-HC-Banner-1718285039.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+@media screen and (max-width:900px){
+    .review_sec_div{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
