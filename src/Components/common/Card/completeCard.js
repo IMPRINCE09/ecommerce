@@ -22,17 +22,17 @@ function CompleteCard() {
     return caratglitz;
   });
   return (
-    <div className="w-full">
-      <div>
+    <div className="w-full ">
+      <div className="w-full shadow-lg p-2 flex items-center justify-center">
         <button
-          className="w-20 h-10 bg-slate-300"
+          className="w-20 h-10 font-bold text-white bg-orange-500 m-1 shadow-lg rounded-lg"
           onClick={() => setFilter("All")}
         >
           All
         </button>
 
         <button
-          className="w-20 h-10 bg-slate-300"
+          className="w-20 h-10 font-bold text-white bg-orange-500 m-1 shadow-lg rounded-lg"
           onClick={() => {
             setFilter("Men");
           }}
@@ -41,7 +41,7 @@ function CompleteCard() {
         </button>
 
         <button
-          className="w-20 h-10 bg-slate-300"
+          className="w-20 h-10 font-bold text-white bg-orange-500 m-1 shadow-lg rounded-lg"
           onClick={() => setFilter("women")}
         >
           Women
@@ -54,8 +54,8 @@ function CompleteCard() {
           </h1>
         ) : (
           <div className="flex flex-wrap justify-center">
-            {filterproduct.map((item, idx) => (
-              <div className=" items-center ">
+            {filterproduct.map((item) => (
+              <div className=" items-center " key={item.id}>
                 <Allcardcontainer item={item} key={item.id} />
               </div>
             ))}

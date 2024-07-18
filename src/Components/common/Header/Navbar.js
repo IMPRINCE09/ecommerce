@@ -51,15 +51,15 @@ const navigation = {
           id: "clothing",
           name: "Clothing",
           items: [
-            { name: "Tops", href: "/daskdasin" },
-            { name: "Dresses", href: "#" },
-            { name: "Pants", href: "#" },
-            { name: "Denim", href: "#" },
-            { name: "Sweaters", href: "#" },
-            { name: "T-Shirts", href: "#" },
-            { name: "Jackets", href: "#" },
-            { name: "Activewear", href: "#" },
-            { name: "Browse All", href: "#" },
+            { name: "Tops", href: "/Womenpage" },
+            { name: "Dresses", href: "/Womenpage" },
+            { name: "Pants", href: "/Womenpage" },
+            { name: "Denim", href: "/Womenpage" },
+            { name: "Sweaters", href: "/Womenpage" },
+            { name: "T-Shirts", href: "/Womenpage" },
+            { name: "Jackets", href: "/Womenpage" },
+            { name: "Activewear", href: "/Womenpage" },
+            { name: "Browse All", href: "/Womenpage" },
           ],
         },
         {
@@ -150,7 +150,7 @@ const navigation = {
   pages: [
     { name: "Mobile Covers", href: "/Covers" },
     { name: "Stores", href: "/store" },
-    { name: "singleprduct", href: "/Singleprduct" },
+    { name: "Home", href: "/" },
   ],
 };
 
@@ -163,7 +163,7 @@ export default function Navbar() {
   const item = useSelector((state) => state.cart);
 
   return (
-    <div className="bg-white ">
+    <div className="bg-white relative z-50 ">
       {/* Mobile menu */}
       <Transition show={open}>
         <Dialog className="relative z-40 lg:hidden" onClose={setOpen}>

@@ -1,14 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Onpageview from "../Overview/Onpageview";
 import { Link } from "react-router-dom";
 import { add } from "../../Pages/Store/Storeslice";
-import { useDispatch, useSelector } from "react-redux";
-// import { fetchproduct } from "../../Pages/Store/Productslice";
-import { STATUES } from "../../Pages/Store/Productslice";
+import { useDispatch } from "react-redux";
+import toast, { Toaster } from "react-hot-toast";
 
 function Allcardcontainer({ item }) {
   const dispatach = useDispatch();
-  const { status } = useSelector((state) => state.product);
 
   const [open, setOpen] = useState(false);
   const [prev, setPrev] = useState(null);
@@ -33,12 +31,6 @@ function Allcardcontainer({ item }) {
   // useEffect(() => {
   //   dispatach(fetchproduct());
   // }, []);
-  if (status === STATUES.LOADING) {
-    return <h1>Loading...</h1>;
-  }
-  if (status === STATUES.ERROR) {
-    return <h2>Something went wrong!</h2>;
-  }
 
   return (
     <>
@@ -54,10 +46,7 @@ function Allcardcontainer({ item }) {
             </Link>
           </div>
           <div className="absolute z-10 left-0 top-2">
-            <img
-              src="https://caratglitz.com/static/media/TRENDING.b77da6eca2da40666fd7bc6d45cd7182.svg"
-              alt="tending-post"
-            ></img>
+            <img src={item.prohot} alt="tending-post"></img>
           </div>
 
           <h4 className="gap-4 ml-2 mt-1">@Resin.com || Product id :</h4>
@@ -69,26 +58,30 @@ function Allcardcontainer({ item }) {
             $ {item.price}
             <del> {item.price_off} </del>
             <span className="text-center text-green-600">
-              {(item.price - item.price_off) / item.price} % Off
+              {((item.price - item.price_off) / item.price) * 100} % Off
             </span>
           </h3>
           <div className="w-full  flex justify-between ">
             <button
               className="w-1/3 m-4 text-center rounded shadow-2xl bg-green-400"
-              onClick={() => handleAdd(item)}
+              onClick={() => {
+                handleAdd(item);
+                toast.success("Product is added to Cart");
+              }}
             >
               <i class="fa-solid fa-cart-shopping "></i>
             </button>
 
             <button
               className="w-1/3 m-4 text-center rounded shadow-2xl bg-green-400 "
-              onClick={() => addData(item.values)}
+              onClick={() => addData(item)}
             >
               view
             </button>
           </div>
         </div>
       </div>
+      <Toaster />
       <Onpageview prev={prev} open={open} setOpen={setOpen} />
     </>
   );
