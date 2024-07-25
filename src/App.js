@@ -16,6 +16,7 @@ import Stylish from "./Components/Pages/Data/Stylish";
 import Purecotton from "./Components/Pages/Data/Purecotton";
 import Designed from "./Components/Pages/Data/Designed";
 import Topproduct from "./Components/Pages/Data/Topproduct";
+import Allcolors from "./Components/Pages/Data/Allcolors";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
             <Route path="/Purecotton" element={<Purecotton />} />
             <Route path="/Designed" element={<Designed />} />
             <Route path="/topsproduct" element={<Topproduct />} />
+            <Route path="/allcolors" element={<Allcolors />} />
           </Routes>
           <Footer />
         </BrowserRouter>

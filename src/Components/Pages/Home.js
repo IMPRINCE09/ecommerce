@@ -12,11 +12,14 @@ import Shopbycategory from "../Carousel/ShopCategory";
 import ShopCateroryview from "../Carousel/ShopCateroryview";
 import Carouselsliders from "../Carousel/Carousel";
 import Reviewsec from "../common/Center/Reviewsec";
+import Chatapp from "./Data/chatapp";
+import Scrollup from "./Data/Scrollup";
 
 function Home() {
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full overflow-hidden ">
       <Carouselsliders />
+      <Chatapp />
       <Features />
       <Clash />
       <Collection />
@@ -29,6 +32,7 @@ function Home() {
       <Reviewsec />
       <Team />
       <Imgcardsec />
+      <Scrollup />
     </div>
   );
 }

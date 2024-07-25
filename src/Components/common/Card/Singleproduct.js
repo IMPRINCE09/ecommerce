@@ -2,15 +2,18 @@ import { useParams } from "react-router-dom";
 import Categoriesapi from "./Cardapicartegory";
 import "./Singleprduct.css";
 import Specification from "./specification";
+import { useDispatch } from "react-redux";
+import { add } from "../../Pages/Store/Storeslice";
+import toast, { Toaster } from "react-hot-toast";
 
 function Singleproduct() {
   const { id } = useParams();
   const product = Categoriesapi.find((p) => p.id === parseInt(id));
 
-  if (!product) {
-    return <div>product not fund</div>;
-  }
-
+  const dispatach = useDispatch();
+  const handleAdd = (itemadd) => {
+    dispatach(add(itemadd));
+  };
   return (
     <>
       <div className="w-full overflow-hidden">
@@ -44,6 +47,10 @@ function Singleproduct() {
               <button
                 className="w-1/2 m-4 text-white h-10 text-xl font-medium shadow-xl rounded-lg"
                 style={{ background: "#fb641b" }}
+                onClick={() => {
+                  handleAdd(product);
+                  toast.success("Product is added to Cart");
+                }}
               >
                 <i class="fa-solid fa-cart-shopping "></i>{" "}
                 <span className="ml-2 ">ADD TO BAG</span>
@@ -51,6 +58,7 @@ function Singleproduct() {
               <button
                 className="w-1/2 m-4 text-white h-10 text-xl font-medium shadow-xl rounded-lg"
                 style={{ background: "#ff9f00" }}
+                onClick={() => toast.success("Payment Method is Disable")}
               >
                 <span className="ml-2 ">BUY NOW</span>
               </button>
@@ -71,10 +79,10 @@ function Singleproduct() {
                 OFF
               </span>
             </h1>
+            <Toaster />
 
             <div className="">
               <h1 style={{ color: " Solidblack" }} className="font-medium mt-4">
-                {" "}
                 Available Offers
               </h1>
 
@@ -97,7 +105,7 @@ function Singleproduct() {
                   <i
                     className="fa-solid fa-tags"
                     style={{ color: "royalblue" }}
-                  ></i>{" "}
+                  ></i>
                   <span style={{ color: "black" }} className="font-medium">
                     Bank OfferGet{" "}
                   </span>{" "}

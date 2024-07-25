@@ -8,7 +8,7 @@ function Purecotton() {
     (item) => item.design === "Purecotton"
   );
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <div className="w-full text-orange-500 text-center m-2 font-semibold text-2xl">
         Pure Cotton
       </div>
