@@ -13,11 +13,10 @@ function Cart() {
   const shippingCharges = 5;
 
   const subTotal = product.reduce(
-    (acc, item) => acc + item.price_off * item.quan,
+    (acc, item) => acc + item.price * item.quan,
     0
   );
   const totalquantity = product.reduce((acc, item) => acc + item.quan, 0);
-  localStorage.setItem("cart", product.length);
 
   return (
     <div className="w-full justify-center items-center mt-4 ">

@@ -3,28 +3,16 @@ import { Link } from "react-router-dom";
 
 function Chatapp() {
   return (
-    <div>
-      <div
-        className=" w-16 h-8 p-1 flex items-center rounded-l shadow-lg bg-slate-100 fixed  top-32 right-0
-     z-50"
-      >
-        <div className="w-16 text-green-400">
-          <Link to="https://wa.me/9119011315" target="_blank">
-            {" "}
-            <i className="fa-brands fa-square-whatsapp fa-2xl"></i>
-          </Link>
-        </div>
+    <div className="relative ">
+      <div className=" fixed w-24 h-8 z-50 pl-1 bg-slate-50 text-green-500 right-0 top-32 flex items-center shadow-lg  ">
+        <Link to="https://wa.me/9119011315" target="_blank">
+          <i class="fa-brands fa-square-whatsapp fa-2xl"></i>
+        </Link>
       </div>
-      <div
-        className=" w-16 h-8 p-1 mt-4 flex items-center rounded-l shadow-lg bg-slate-100 fixed  top-40 right-0
-     z-50"
-      >
-        <div className="w-16 text-red-600 ">
-          <Link to="https://www.instagram.com/_imprince___/" target="_blank">
-            {" "}
-            <i className="fa-brands fa-square-instagram fa-2xl"></i>
-          </Link>
-        </div>
+      <div className=" fixed w-24 h-8 pl-1 z-50 bg-slate-50 text-red-500 right-0 top-44 flex items-center shadow-lg ">
+        <Link to="https://www.instagram.com/_imprince___/" target="_blank">
+          <i class="fa-brands fa-square-instagram fa-2xl"></i>
+        </Link>
       </div>
     </div>
   );
